@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vortex Esports | Lobby Results</title>
+  <meta name="description" content="Vortex Esports lobby results — player kills, match rankings, TOP 12 leaderboard and prize details.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vortex Esports">
+  <meta property="og:title" content="Vortex Esports | Lobby Results">
+  <meta property="og:description" content="Track player kills, placement and lobby prize results.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='15' font-weight='900' text-anchor='middle' fill='%23fff'%3EVTX%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="responsive.css?v=4">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <a class="logo" href="index.html" aria-label="Vortex Esports — Home">
+        <span class="logo-mark">VTX</span><span class="logo-dot">.</span>
+      </a>
+
+      <button class="nav-toggle" id="menuBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="lobby.html" aria-current="page">Lobby</a>
+        <a class="nav-link" href="practice.html">Practice</a>
+        <a class="nav-link" href="players.html">Players</a>
+        <a class="nav-link" href="combo-loadout.html">Combo &amp; Loadout</a>
+        <a class="nav-link" href="social.html">Social</a>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head" aria-labelledby="pageTitle">
+      <div class="container">
+        <p class="eyebrow">Vortex Esports</p>
+        <h1 id="pageTitle">Lobby <span class="text-accent">Results</span></h1>
+        <p>Track player kills, placement and lobby prize results.</p>
+      </div>
+    </section>
+
+    <div class="page-main">
+      <section class="section container" aria-labelledby="playerTableTitle">
+        <div class="section-head">
+          <p class="eyebrow">Player Performance</p>
+          <h2 id="playerTableTitle">Lobby Player Table</h2>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="Lobby player performance" tabindex="0">
+          <table>
+            <caption class="table-caption">Kills recorded per player in lobby games.</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Player Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Kill</th>
+              </tr>
+            </thead>
+            <tbody id="lobbyPlayers"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section container" aria-labelledby="matchTitle">
+        <div class="section-head">
+          <p class="eyebrow">Match Results</p>
+          <h2 id="matchTitle">Lobby Ranking</h2>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="Lobby match results" tabindex="0">
+          <table>
+            <caption class="table-caption">Latest lobby matches and placement.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Lobby</th>
+                <th scope="col">Rank</th>
+                <th scope="col">Players</th>
+                <th scope="col">Win / Prize</th>
+              </tr>
+            </thead>
+            <tbody id="lobbyResults"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section container" aria-labelledby="rankTitle">
+        <div class="section-head">
+          <p class="eyebrow">Top 12 → Top 1</p>
+          <h2 id="rankTitle">Leaderboard</h2>
+        </div>
+
+        <div class="rank-grid" id="rankings"></div>
+      </section>
+
+      <section class="section container" aria-label="Lobby totals">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong id="lobbyGames">0</strong>
+            <span>Total Games</span>
+          </div>
+          <div class="stat-card">
+            <strong id="lobbyWins">0</strong>
+            <span>Total Wins</span>
+          </div>
+          <div class="stat-card">
+            <strong id="lobbyKills">0</strong>
+            <span>Total Kills</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" aria-label="Vortex Esports — Home">
+            <span class="logo-mark">VTX</span><span class="logo-dot">.</span>
+          </a>
+          <p>Vortex Esports is a competitive Free Fire team built on teamwork, communication, discipline and consistent practice.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Footer — Explore">
+          <h4>Explore</h4>
+          <a href="lobby.html">Lobby Results</a>
+          <a href="practice.html">Practice</a>
+          <a href="about.html">About Us</a>
+        </nav>
+
+        <nav class="footer-col" aria-label="Footer — Team">
+          <h4>Team</h4>
+          <a href="players.html">Players</a>
+          <a href="combo-loadout.html">Combo &amp; Loadout</a>
+          <a href="social.html">Socials</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Vortex Esports. All rights reserved.</p>
+        <p>Made for the VTX squad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./lobby-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

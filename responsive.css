@@ -1,0 +1,192 @@
+/* ==========================================================================
+   VORTEX ESPORTS — Responsive styles
+   Breakpoints: 1024px (large tablet), 768px (tablet), 560px (mobile)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large tablet / small laptop
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .hero-card {
+    min-height: 360px;
+  }
+
+  .combo-grid,
+  .social-grid,
+  .rank-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* Navigation becomes a slide-down panel */
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-2) 4%;
+    background: var(--clr-bg);
+    border-bottom: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .nav-link:last-child {
+    border-bottom: 0;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    color: var(--clr-accent);
+  }
+
+  .player-grid,
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-top {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-media {
+    max-width: 340px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 560px) {
+  .section {
+    padding-block: var(--space-7);
+  }
+
+  .hero {
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-7);
+  }
+
+  .hero-content h1 {
+    font-size: 2.35rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-card {
+    min-height: 300px;
+    transform: rotate(0);
+  }
+
+  .team-logo {
+    width: 120px;
+    height: 120px;
+    font-size: 2.4rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .player-grid,
+  .combo-grid,
+  .social-grid,
+  .rank-grid,
+  .about-grid,
+  .weapon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: var(--space-5) var(--space-3);
+  }
+
+  .page-head {
+    padding-block: var(--space-7);
+  }
+
+  .combo-card {
+    padding: var(--space-5);
+  }
+
+  .combo-header {
+    flex-direction: column;
+  }
+
+  .loadout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-band {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-6);
+  }
+
+  .cta-band .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-top {
+    gap: var(--space-5);
+  }
+
+  .profile-media {
+    max-width: 100%;
+  }
+}
